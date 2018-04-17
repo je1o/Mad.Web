@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -66,6 +67,19 @@
             }
 
             .bg-1 p {
+                font-style: italic;
+            }
+
+        .bg-2 {
+            background: #E0E0E0;
+            color: #757575;
+        }
+
+            .bg-2 h3 {
+                color: #fff;
+            }
+
+            .bg-2 p {
                 font-style: italic;
             }
 
@@ -181,6 +195,10 @@
                     text-decoration: none;
                 }
 
+            footer p {
+                letter-spacing: 1px;
+            }
+
         .form-control {
             border-radius: 0;
         }
@@ -190,7 +208,7 @@
         }
     </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -200,26 +218,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#myPage">Logo</a>
+                <a class="navbar-brand" href="#home">Logo</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#myPage">HOME</a></li>
-                    <li><a href="#band">BAND</a></li>
-                    <li><a href="#tour">TOUR</a></li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#photography">PHOTOGRAPHY</a></li>
+                    <li><a href="#graphicdesign">GRAPHIC DESIGN</a></li>
+                    <li><a href="#profile">PROFILE</a></li>
+                    <li><a href="#awards">AWARDS</a></li>
                     <li><a href="#contact">CONTACT</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            MORE
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Merchandise</a></li>
-                            <li><a href="#">Extras</a></li>
-                            <li><a href="#">Media</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                    <li><a href="#"><span class="fa fa-instagram"></span></a></li>
                 </ul>
             </div>
         </div>
@@ -246,10 +255,10 @@
 
     <!-- Footer -->
     <footer class="text-center">
-        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+        <a class="up-arrow" href="#home" data-toggle="tooltip" title="TOP">
             <span class="glyphicon glyphicon-chevron-up"></span>
         </a><br><br>
-        <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p>
+        <p>www.martinaquinodigital.com</p>
     </footer>
 
     <script>
@@ -258,7 +267,7 @@
             $('[data-toggle="tooltip"]').tooltip();
 
             // Add smooth scrolling to all links in navbar + footer link
-            $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+            $(".navbar a, footer a[href='#home']").on('click', function (event) {
 
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
