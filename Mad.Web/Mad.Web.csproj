@@ -154,6 +154,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\chicago.jpg" />
     <Content Include="Content\la.jpg" />
+    <Content Include="Content\mad-header.png" />
+    <Content Include="Content\mad-logo.png" />
     <Content Include="Content\newyork.jpg" />
     <Content Include="Content\ny.jpg" />
     <Content Include="Content\paris.jpg" />
