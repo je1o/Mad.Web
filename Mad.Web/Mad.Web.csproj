@@ -159,7 +159,9 @@
     <Content Include="Content\newyork.jpg" />
     <Content Include="Content\ny.jpg" />
     <Content Include="Content\paris.jpg" />
+    <Content Include="Content\sample2.png" />
     <Content Include="Content\sanfran.jpg" />
+    <Content Include="Content\thumbnail.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
