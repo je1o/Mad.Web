@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="http://kombai.github.io/freewall/freewall.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.1.0/email.min.js"></script>
     <style>
         body {
             font: 400 15px/1.8 Lato, sans-serif;
@@ -119,7 +121,7 @@
             transition: .2s;
         }
 
-            .btn:hover, .btn:focus {
+            .btn:hover:enabled, .btn:focus:enabled {
                 border: 1px solid #333;
                 background-color: #fff;
                 color: #000;
@@ -340,6 +342,26 @@
             //wall.fitWidth();
             // for scroll bar appear;
             //$(window).trigger("resize");
+        }       
+
+        function submitContact(value) {
+            if (value) {
+                $("#cName").prop("disabled", true);
+                $("#cEmail").prop("disabled", true);
+                $("#cMessage").prop("disabled", true);
+                $("#sendMsg").text("Sending");
+                $("#sendMsg").prop("disabled", true);
+            }
+            else {
+                $("#cName").prop("disabled", false);
+                $("#cEmail").prop("disabled", false);
+                $("#cMessage").prop("disabled", false);
+                $("#cName").prop("value", "");
+                $("#cEmail").prop("value", "");
+                $("#cMessage").prop("value", "");
+                $("#sendMsg").prop("disabled", false);
+                $("#sendMsg").text("Send");
+            }
         }
 
         $(document).ready(function () {
@@ -375,6 +397,26 @@
 
             $("[data-fancybox]").fancybox({
                 buttons: ["close"]
+            });
+
+            emailjs.init("user_W4oMRathYxpVpn1vW2JQa");
+
+            $('#cForm').submit(function () {
+                var n = $("#cName");
+                var e = $("#cEmail");
+                var m = $("#cMessage");
+                if (n.val() && e.val() && m.val()) {
+                    submitContact(true);
+                    emailjs.send("cr8madness", "cr8madness", { "name": n.val(), "email": e.val(), "message": m.val() })
+                        .then(function (response) {
+                            console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                            submitContact(false);
+                        }, function (err) {
+                            console.log("FAILED. error=", err);
+                            submitContact(false);
+                        });
+                }
+                return false;
             });
         })
     </script>

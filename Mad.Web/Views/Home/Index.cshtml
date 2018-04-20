@@ -219,22 +219,24 @@
             <p>+61 481 966 670</p>
             <p>cr8madness@gmailcom</p>
         </div>
-        <div class="col-md-8">
-            <div class="row">
-                <div class="col-sm-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        <form id="cForm" action="">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="cName" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="cEmail" name="email" placeholder="Email" type="email" required>
+                    </div>
                 </div>
-                <div class="col-sm-6 form-group">
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                <textarea class="form-control" id="cMessage" name="message" placeholder="Message" rows="5" required></textarea>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <button class="btn pull-right" id="sendMsg" type="submit">Send</button>
+                    </div>
                 </div>
             </div>
-            <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
-            <br>
-            <div class="row">
-                <div class="col-md-12 form-group">
-                    <button class="btn pull-right" type="submit">Send</button>
-                </div>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
