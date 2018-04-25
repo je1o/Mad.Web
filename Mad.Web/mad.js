@@ -55,9 +55,9 @@
     };
 
     initCarousel(data.carousel, "Images/");
-    initWall(data.photos, "Images/", "photo", 220, "#photoWall");
-    initWall(data.reports, "Images/Reports/", "report", 160, "#reportWall");
-    initWall(data.prints, "Images/Prints/", "print", 160, "#printWall");
+    initWall(data.photos, "Images/", "photo", 250, "#photoWall");
+    initWall(data.reports, "Images/Reports/", "report", 150, "#reportWall");
+    initWall(data.prints, "Images/Prints/", "print", 150, "#printWall");
 
     $("a[rel='photo']").fancybox({
         buttons: ["close"]
@@ -101,7 +101,7 @@ function initCarousel(items, url) {
     $("#carInner").html(html);
 }
 
-function initWall(items, url, type, size, wall) {
+function initWall(items, url, type, size, name) {
     var temp = "<div class='brick'><a rel='" + type + "' data-fancybox='images' href='{u}' data-width='{w}' data-height='{h}'><img src='{u}' /></a></div>";
     var html = "";
     for (var i = 0; i <= items.length - 1; i++) {
@@ -109,8 +109,10 @@ function initWall(items, url, type, size, wall) {
         html += temp.replace(/\{u\}/g, url + item[0]).replace(/\{w\}/g, item[1]).replace(/\{h\}/g, item[2]);
     }
 
-    $(wall).html(html);  
-    freewallize(wall, size);
+    $(name).html(html);  
+    $(name).imagesLoaded().always(function (instance) {
+        freewallize(name, size);
+    });
 }
 
 function freewallize(name, size) {
@@ -146,10 +148,13 @@ function freewallize(name, size) {
         }
     });
 
-    $(".brick img").one("load", function () {
+    wall.fitWidth();
+    $(window).trigger("resize");
+
+    /*$(".brick img").one("load", function () {
         wall.fitWidth();
     }).each(function () {
         if (this.complete)
             $(this).load();
-        });
+        });*/
 }
