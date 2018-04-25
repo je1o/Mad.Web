@@ -395,7 +395,11 @@
             freewallize("#freewall1");
             freewallize("#freewall2");
 
-            $("[data-fancybox]").fancybox({
+            $("a[rel=gallery1]").fancybox({
+                buttons: ["close"]
+            });
+
+            $("a[rel=gallery2]").fancybox({
                 buttons: ["close"]
             });
 
