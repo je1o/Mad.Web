@@ -56,8 +56,8 @@
 
     initCarousel(data.carousel, "Images/");
     initWall(data.photos, "Images/", "photo", 250, "#photoWall");
-    initWall(data.reports, "Images/Reports/", "report", 150, "#reportWall");
-    initWall(data.prints, "Images/Prints/", "print", 150, "#printWall");
+    initWall(data.reports, "Images/Reports/", "report", 155, "#reportWall");
+    initWall(data.prints, "Images/Prints/", "print", 165, "#printWall");
 
     $("a[rel='photo']").fancybox({
         buttons: ["close"]
@@ -102,11 +102,12 @@ function initCarousel(items, url) {
 }
 
 function initWall(items, url, type, size, name) {
+    var d = new Date();
     var temp = "<div class='brick'><a rel='" + type + "' data-fancybox='images' href='{u}' data-width='{w}' data-height='{h}'><img src='{u}' /></a></div>";
     var html = "";
     for (var i = 0; i <= items.length - 1; i++) {
         var item = items[i];
-        html += temp.replace(/\{u\}/g, url + item[0]).replace(/\{w\}/g, item[1]).replace(/\{h\}/g, item[2]);
+        html += temp.replace(/\{u\}/g, url + item[0] + "?t=" + d.getTime()).replace(/\{w\}/g, item[1]).replace(/\{h\}/g, item[2]);
     }
 
     $(name).html(html);  
@@ -116,32 +117,21 @@ function initWall(items, url, type, size, name) {
 }
 
 function freewallize(name, size) {
-    var total = 0;
-    var count = 0;
-    var max = 0;
     $(".brick").each(function (index, item) {
-        var c = size;
         var h = parseInt($(item).children('a').attr("data-height"));
         var w = parseInt($(item).children('a').attr("data-width"));
         if (h > w) {
-            var v = w / (h / c);
-            $(item).height(c).width(v);
-            total += v;
-            if (v > max)
-                max = v;
+            $(item).height(size).width(w / (h / size));
         }
-        else {
-            $(item).height(h / (w / c)).width(c);
-            total += c;
-        }
-        count++;
+        else
+            $(item).height(h / (w / size)).width(size);
     });
 
     var wall = new Freewall(name);
     wall.reset({
         selector: ".brick",
-        animate: true,
-        cellW: total / count,
+        animate: false,
+        cellW: size,
         cellH: 'auto',
         onResize: function () {
             wall.fitWidth();
@@ -157,4 +147,25 @@ function freewallize(name, size) {
         if (this.complete)
             $(this).load();
         });*/
+}
+
+
+function submitContact(value) {
+    if (value) {
+        $("#cName").prop("disabled", true);
+        $("#cEmail").prop("disabled", true);
+        $("#cMessage").prop("disabled", true);
+        $("#sendMsg").text("Sending");
+        $("#sendMsg").prop("disabled", true);
+    }
+    else {
+        $("#cName").prop("disabled", false);
+        $("#cEmail").prop("disabled", false);
+        $("#cMessage").prop("disabled", false);
+        $("#cName").prop("value", "");
+        $("#cEmail").prop("value", "");
+        $("#cMessage").prop("value", "");
+        $("#sendMsg").prop("disabled", false);
+        $("#sendMsg").text("Send");
+    }
 }
