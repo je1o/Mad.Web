@@ -246,12 +246,12 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#photography">PHOTOGRAPHY</a></li>
-                    <li><a href="#graphicdesign">GRAPHIC DESIGN</a></li>
-                    <li><a href="#profile">PROFILE</a></li>
-                    <li><a href="#awards">AWARDS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#home" data-toggle="collapse" data-target=".navbar-collapse.in">HOME</a></li>
+                    <li><a href="#photography" data-toggle="collapse" data-target=".navbar-collapse.in">PHOTOGRAPHY</a></li>
+                    <li><a href="#graphicdesign" data-toggle="collapse" data-target=".navbar-collapse.in">GRAPHIC DESIGN</a></li>
+                    <li><a href="#profile" data-toggle="collapse" data-target=".navbar-collapse.in">PROFILE</a></li>
+                    <li><a href="#awards" data-toggle="collapse" data-target=".navbar-collapse.in">AWARDS</a></li>
+                    <li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse.in">CONTACT</a></li>
                     <li><a href="https://www.instagram.com/martin_not_here/" target="_blank"><span class="fa fa-instagram" style="font-size: 18px"></span></a></li>
                 </ul>
             </div>
@@ -304,7 +304,7 @@
                 var c = 250
                 var h = parseInt($(item).children('a').attr("data-height"));
                 var w = parseInt($(item).children('a').attr("data-width"));
-                if (h > w) {;
+                if (h > w) {
                     var v = w / (h / c);
                     $(item).height(c).width(v);
                     total += v;
@@ -333,7 +333,7 @@
 
                 $(".brick img").one("load", function () {
                     wall.fitWidth();
-                    //wall.fitHeight();                    
+                    //wall.fitHeight();    
                 }).each(function () {
                     if (this.complete) $(this).load();
                     });
@@ -395,11 +395,11 @@
             freewallize("#freewall1");
             freewallize("#freewall2");
 
-            $("a[rel=gallery1]").fancybox({
+            $("a[rel=photo]").fancybox({
                 buttons: ["close"]
             });
 
-            $("a[rel=gallery2]").fancybox({
+            $("a[rel=report][rel=print]").fancybox({
                 buttons: ["close"]
             });
 
