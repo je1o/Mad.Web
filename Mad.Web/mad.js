@@ -149,6 +149,7 @@ function freewallize(name, size) {
     $(".brick img").one("load", function () {
         wall.fitWidth();
     }).each(function () {
-        if (this.complete) $(this).load();
+        if (this.complete)
+            $(this).load();
         });
 }
