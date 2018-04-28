@@ -123,6 +123,8 @@ h3, h4 {
     padding: 0 0 15px 0;
     border: none;
     border-radius: 0;
+    width: 250px;
+    height: 620px;
 }
 
     .thumbnail p {
@@ -256,4 +258,8 @@ textarea {
     margin: 0;
     display: block;
     width: 100%;
+}
+
+.loader {
+    visibility: hidden;
 }

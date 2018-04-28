@@ -5,18 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" type="text/css" />
+    <link rel="stylesheet" href="Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="Content/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
     <link rel="stylesheet" href="mad.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://kombai.github.io/freewall/freewall.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-    <script src="https://cdn.emailjs.com/sdk/2.1.0/email.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="Content/jquery.min.js"></script>
+    <script src="Content/bootstrap.min.js"></script>
+    <script src="Content/freewall.js"></script>
+    <script src="Content/jquery.fancybox.min.js"></script>
+    <script src="Content/email.min.js"></script>
+    <script src="Content/imagesloaded.pkgd.min.js"></script>
     <script src="mad.js"></script>
 </head>
 <body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -65,7 +66,7 @@
     <div id="photography" class="container">
         <h3 class="text-center">PHOTOGRAPHY</h3>
         <br>
-        <div id="photoWall" class="freewall">
+        <div id="photoWall" class="freewall loader">
         </div>
     </div>
 
@@ -75,11 +76,11 @@
             <br>
             <div class="row">
                 <div class="col-sm-5">
-                    <div id="reportWall" class="freewall">
+                    <div id="reportWall" class="freewall loader">
                     </div>
                 </div>
                 <div class="col-sm-7">
-                    <div id="printWall" class="freewall">
+                    <div id="printWall" class="freewall loader">
                     </div>
                 </div>
             </div>
@@ -101,60 +102,56 @@
         <div class="container">
             <h3 class="text-center">AWARDS</h3>
             <div class="row text-center">
-                <div class="col-sm-3">
-                    <div class="thumbnail">
-                        <div class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators" style="visibility: hidden"></ol>
-                            <div id="aw1" class="carousel-inner" role="listbox">
+                <div class="col-sm-12">
+                    <div id="awardWall" class="freewall loader">
+                        <div class="thumbnail">
+                            <div class="carousel slide" data-ride="carousel" style="margin: 87px 0px">
+                                <ol class="carousel-indicators" style="visibility: hidden"></ol>
+                                <div id="aw1" class="carousel-inner" role="listbox">
+                                </div>
                             </div>
+                            <p><strong>BRONZE WINNER</strong></p>
+                            <p>Singapore Corporate Awards 2014</p>
+                            <p>Best AR - Mid Cap Category</p>
+                            <p>Del Monte Pacific Limited AR 2013</p>
+                            <img class="logo" src="Images/Awards/SGCAwards.png" />
                         </div>
-                        <p><strong>BRONZE WINNER</strong></p>
-                        <p>Singapore Corporate Awards 2014</p>
-                        <p>Best AR - Mid Cap Category</p>
-                        <p>Del Monte Pacific Limited AR 2013</p>
-                        <img class="logo" src="Images/Awards/SGCAwards.png" />
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="thumbnail">
-                        <div class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators" style="visibility: hidden"></ol>
-                            <div id="aw2" class="carousel-inner" role="listbox">
+                        <div class="thumbnail">
+                            <div class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators" style="visibility: hidden"></ol>
+                                <div id="aw2" class="carousel-inner" role="listbox">
+                                </div>
                             </div>
+                            <p><strong>HONORS WINNER</strong></p>
+                            <p>28th International ARC Awards 2014</p>
+                            <p>Overall AR Design</p>
+                            <p>Oceanus Group Limited AR2013</p>
+                            <img class="logo" src="Images/Awards/ARCAwards.png" />
                         </div>
-                        <p><strong>HONORS WINNER</strong></p>
-                        <p>28th International ARC Awards 2014</p>
-                        <p>Overall AR Design</p>
-                        <p>Oceanus Group Limited AR2013</p>
-                        <img class="logo" src="Images/Awards/ARCAwards.png" />
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="thumbnail">
-                        <div class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators" style="visibility: hidden"></ol>
-                            <div id="aw3" class="carousel-inner" role="listbox">
+                        <div class="thumbnail">
+                            <div class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators" style="visibility: hidden"></ol>
+                                <div id="aw3" class="carousel-inner" role="listbox">
+                                </div>
                             </div>
+                            <p><strong>BRONZE WINNER</strong></p>
+                            <p>28th International ARC Awards 2014</p>
+                            <p>Overall AR Design</p>
+                            <p>EnGro Corporation Limited AR 2013</p>
+                            <img class="logo" src="Images/Awards/ARCAwards.png" />
                         </div>
-                        <p><strong>BRONZE WINNER</strong></p>
-                        <p>28th International ARC Awards 2014</p>
-                        <p>Overall AR Design</p>
-                        <p>EnGro Corporation Limited AR 2013</p>
-                        <img class="logo" src="Images/Awards/ARCAwards.png" />
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="thumbnail">
-                        <div class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators" style="visibility: hidden"></ol>
-                            <div id="aw4" class="carousel-inner" role="listbox">
+                        <div class="thumbnail">
+                            <div class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators" style="visibility: hidden"></ol>
+                                <div id="aw4" class="carousel-inner" role="listbox">
+                                </div>
                             </div>
+                            <p><strong>HONORS WINNER</strong></p>
+                            <p>ARC Awards 2015</p>
+                            <p>Building Materials and Supplies</p>
+                            <p>EnGro Corporation Limited AR 2014</p>
+                            <img class="logo" src="Images/Awards/ARCAwards.png" />
                         </div>
-                        <p><strong>HONORS WINNER</strong></p>
-                        <p>ARC Awards 2015</p>
-                        <p>Building Materials and Supplies</p>
-                        <p>EnGro Corporation Limited AR 2014</p>
-                        <img class="logo" src="Images/Awards/ARCAwards.png" />
                     </div>
                 </div>
             </div>
@@ -215,6 +212,7 @@
     </footer>
 
     <script>
+        $(document)[0].oncontextmenu = function () { return false; }
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
             $(".navbar a, footer a[href='#home']").on('click', function (event) {
@@ -246,8 +244,6 @@
             });
 
             initMad();
-
-            $(document)[0].oncontextmenu = function () { return false; }
         })
     </script>
 
