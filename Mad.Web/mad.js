@@ -1,5 +1,5 @@
-﻿function initMad() {
-    var data = {
+﻿function getData() {
+    return {
         "carousel": [
             ["MAIN1.png", "1200", "700"],
             ["MAIN2.png", "1200", "700"],
@@ -40,7 +40,7 @@
             ["AD_SGK_tall.png", "400", "1065"],
             ["AD_SGK_tall2.png", "338", "900"],
             ["AD_SGK_tall3.png", "338", "900"],
-            ["AD_SGK_wide.png", "1603", "1202"],            
+            ["AD_SGK_wide.png", "1603", "1202"],
             ["packaging_b45_barako.png", "1200", "750"],
             ["packaging_b45_pula.png", "1200", "750"],
             ["packaging_b45_puti.png", "1200", "750"],
@@ -51,13 +51,172 @@
             ["poster_b45_barako.png", "1200", "791"],
             ["poster_b45_pula.png", "1200", "791"],
             ["poster_b45_puti.png", "1200", "791"]
+        ],
+        "awards": [
+            {
+                "id": "aw1",
+                "url": "Images/Awards/DMPL/",
+                "images":
+                    [
+                        "DelMonte2013LS_17March-01.jpg",
+                        "DelMonte2013LS_17March-02.jpg",
+                        "DelMonte2013LS_17March-03.jpg",
+                        "DelMonte2013LS_17March-04.jpg",
+                        "DelMonte2013LS_17March-05.jpg",
+                        "DelMonte2013LS_17March-06.jpg",
+                        "DelMonte2013LS_17March-07.jpg",
+                        "DelMonte2013LS_17March-08.jpg",
+                        "DelMonte2013LS_17March-09.jpg",
+                        "DelMonte2013LS_17March-10.jpg",
+                        "DelMonte2013LS_17March-11.jpg",
+                        "DelMonte2013LS_17March-12.jpg",
+                        "DelMonte2013LS_17March-13.jpg",
+                        "DelMonte2013LS_17March-14.jpg",
+                        "DelMonte2013LS_17March-15.jpg",
+                        "DelMonte2013LS_17March-16.jpg",
+                        "DelMonte2013LS_17March-17.jpg",
+                        "DelMonte2013LS_17March-18.jpg",
+                        "DelMonte2013LS_17March-19.jpg",
+                        "DelMonte2013LS_17March-20.jpg",
+                        "DelMonte2013LS_17March-21.jpg",
+                        "DelMonte2013LS_17March-22.jpg",
+                        "DelMonte2013LS_17March-23.jpg",
+                        "DelMonte2013LS_17March-24.jpg",
+                        "DelMonte2013LS_17March-25.jpg",
+                        "DelMonte2013LS_17March-26.jpg",
+                        "DelMonte2013LS_17March-27.jpg",
+                        "DelMonte2013LS_17March-28.jpg",
+                        "DelMonte2013LS_17March-29.jpg",
+                        "DelMonte2013LS_17March-30.jpg",
+                        "DelMonte2013LS_17March-31.jpg",
+                        "DelMonte2013LS_17March-32.jpg",
+                        "DelMonte2013LS_17March-33.jpg",
+                        "DelMonte2013LS_17March-34.jpg",
+                        "DelMonte2013LS_17March-35.jpg",
+                        "DelMonte2013LS_17March-36.jpg",
+                        "DelMonte2013LS_17March-37.jpg",
+                        "DelMonte2013LS_17March-38.jpg",
+                        "DelMonte2013LS_17March-39.jpg",
+                        "DelMonte2013LS_17March-40.jpg",
+                        "DelMonte2013LS_17March-41.jpg",
+                        "DelMonte2013LS_17March-42.jpg",
+                        "DelMonte2013LS_17March-43.jpg",
+                        "DelMonte2013LS_17March-44.jpg",
+                        "DelMonte2013LS_17March-45.jpg",
+                        "DelMonte2013LS_17March-46.jpg"
+                    ]
+            },
+            {
+                "id": "aw2",
+                "url": "Images/Awards/Oceanus2013/",
+                "images":
+                    [
+                        "O20131.png",
+                        "O201310.png",
+                        "O201311.png",
+                        "O201312.png",
+                        "O201313.png",
+                        "O201314.png",
+                        "O201315.png",
+                        "O201316.png",
+                        "O201317.png",
+                        "O201318.png",
+                        "O201319.png",
+                        "O20132.png",
+                        "O201320.png",
+                        "O201321.png",
+                        "O20133.png",
+                        "O20134.png",
+                        "O20135.png",
+                        "O20136.png",
+                        "O20137.png",
+                        "O20138.png",
+                        "O20139.png"
+                    ]
+            },
+            {
+                "id": "aw3",
+                "url": "Images/Awards/Engro2013/",
+                "images":
+                    [
+                        "ENGRO2013_Review Final_SGX-001.jpg",
+                        "ENGRO2013_Review Final_SGX-002.jpg",
+                        "ENGRO2013_Review Final_SGX-003.jpg",
+                        "ENGRO2013_Review Final_SGX-004.jpg",
+                        "ENGRO2013_Review Final_SGX-005.jpg",
+                        "ENGRO2013_Review Final_SGX-006.jpg",
+                        "ENGRO2013_Review Final_SGX-007.jpg",
+                        "ENGRO2013_Review Final_SGX-008.jpg",
+                        "ENGRO2013_Review Final_SGX-009.jpg",
+                        "ENGRO2013_Review Final_SGX-010.jpg",
+                        "ENGRO2013_Review Final_SGX-011.jpg",
+                        "ENGRO2013_Review Final_SGX-012.jpg",
+                        "ENGRO2013_Review Final_SGX-013.jpg",
+                        "ENGRO2013_Review Final_SGX-014.jpg",
+                        "ENGRO2013_Review Final_SGX-015.jpg",
+                        "ENGRO2013_Review Final_SGX-016.jpg",
+                        "ENGRO2013_Review Final_SGX-017.jpg",
+                        "ENGRO2013_Review Final_SGX-018.jpg",
+                        "ENGRO2013_Review Final_SGX-019.jpg",
+                        "ENGRO2013_Review Final_SGX-020.jpg",
+                        "ENGRO2013_Review Final_SGX-021.jpg",
+                        "ENGRO2013_Review Final_SGX-022.jpg",
+                        "ENGRO2013_Review Final_SGX-023.jpg",
+                        "ENGRO2013_Review Final_SGX-024.jpg",
+                        "ENGRO2013_Review Final_SGX-025.jpg",
+                        "ENGRO2013_Review Final_SGX-026.jpg",
+                        "ENGRO2013_Review Final_SGX-122.jpg"
+                    ]
+            },
+            {
+                "id": "aw4",
+                "url": "Images/Awards/Engro2014/",
+                "images":
+                    [
+                        "Engro2014_Review__Page_01.jpg",
+                        "Engro2014_Review__Page_02.jpg",
+                        "Engro2014_Review__Page_03.jpg",
+                        "Engro2014_Review__Page_04.jpg",
+                        "Engro2014_Review__Page_05.jpg",
+                        "Engro2014_Review__Page_06.jpg",
+                        "Engro2014_Review__Page_07.jpg",
+                        "Engro2014_Review__Page_08.jpg",
+                        "Engro2014_Review__Page_09.jpg",
+                        "Engro2014_Review__Page_10.jpg",
+                        "Engro2014_Review__Page_11.jpg",
+                        "Engro2014_Review__Page_12.jpg",
+                        "Engro2014_Review__Page_13.jpg",
+                        "Engro2014_Review__Page_14.jpg",
+                        "Engro2014_Review__Page_15.jpg",
+                        "Engro2014_Review__Page_16.jpg",
+                        "Engro2014_Review__Page_17.jpg",
+                        "Engro2014_Review__Page_18.jpg",
+                        "Engro2014_Review__Page_19.jpg",
+                        "Engro2014_Review__Page_20.jpg",
+                        "Engro2014_Review__Page_21.jpg",
+                        "Engro2014_Review__Page_22.jpg",
+                        "Engro2014_Review__Page_23.jpg",
+                        "Engro2014_Review__Page_24.jpg",
+                        "Engro2014_Review__Page_25.jpg",
+                        "Engro2014_Review__Page_26.jpg"
+                    ]
+            },
         ]
     };
+}
+
+function initMad() {
+    var data = getData();
 
     initCarousel(data.carousel, "Images/");
     initWall(data.photos, "Images/", "photo", 250, "#photoWall");
     initWall(data.reports, "Images/Reports/", "report", 155, "#reportWall");
     initWall(data.prints, "Images/Prints/", "print", 165, "#printWall");
+
+    for (var i = 0; i <= data.awards.length - 1; i++) {
+        var award = data.awards[i];
+        initAwards(award.id, award.url, award.images);
+    }
 
     $("a[rel='photo']").fancybox({
         buttons: ["close"]
@@ -66,6 +225,12 @@
     $("a[rel='report'], a[rel='print']").fancybox({
         buttons: ["close"]
     });
+
+    for (var i = 0; i <= data.awards.length - 1; i++) {
+        $("a[rel='" + data.awards[i].id + "']").fancybox({
+            buttons: ["close"]
+        });
+    }
 
     emailjs.init("user_W4oMRathYxpVpn1vW2JQa");
     $('#cForm').submit(function () {
@@ -114,6 +279,19 @@ function initWall(items, url, type, size, name) {
     $(name).imagesLoaded().always(function (instance) {
         freewallize(name, size);
     });
+}
+
+function initAwards(id, url, items) {
+    var temp = "<div class='{c}'><a rel='" + id + "' data-fancybox='images' href='{u}'><img src='{u}' /></a></div>";
+    var html = "";
+    for (var i = 0; i <= items.length - 1; i++) {
+        var cl = 'item';
+        if (i == 0)
+            cl += ' active';
+        html += temp.replace(/\{c\}/g, cl).replace(/\{u\}/g, url + items[i]);
+    }
+
+    $("#" + id).html(html);
 }
 
 function freewallize(name, size) {
