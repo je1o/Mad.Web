@@ -109,6 +109,16 @@ h3, h4 {
         font-style: italic;
     }
 
+.bg-3 {
+    padding: 80px 120px
+}
+
+@media (max-width: 600px) {
+    .bg-3 {
+        padding: 80px 30px 60px;
+    }    
+}
+
 .list-group-item:first-child {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
@@ -123,8 +133,8 @@ h3, h4 {
     padding: 0 0 15px 0;
     border: none;
     border-radius: 0;
-    width: 250px;
-    height: 620px;
+    width: 200px;
+    height: 350px;
 }
 
     .thumbnail p {

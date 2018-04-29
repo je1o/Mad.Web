@@ -236,8 +236,8 @@ function initMad() {
     wall.reset({
         selector: ".thumbnail",
         animate: false,
-        cellW: 250,
-        cellH: 550,
+        cellW: 200,
+        cellH: 480,
         onResize: function () {
             wall.refresh();
         }
@@ -285,12 +285,11 @@ function initCarousel(items, url) {
 }
 
 function initWall(items, url, type, size, name) {
-    var d = new Date();
-    var temp = "<div class='brick'><a rel='" + type + "' data-fancybox='images' href='{u}' data-width='{w}' data-height='{h}'><img src='{u}' /></a></div>";
+    var temp = "<div class='brick'><a rel='" + type + "' data-fancybox='images' href='{u}' data-width='{w}' data-height='{h}'><img src='{t}' /></a></div>";
     var html = "";
     for (var i = 0; i <= items.length - 1; i++) {
         var item = items[i];
-        html += temp.replace(/\{u\}/g, url + item[0] + "?t=" + d.getTime()).replace(/\{w\}/g, item[1]).replace(/\{h\}/g, item[2]);
+        html += temp.replace(/\{u\}/g, url + item[0]).replace(/\{t\}/g, url + 't_' + item[0]).replace(/\{w\}/g, item[1]).replace(/\{h\}/g, item[2]);
     }
 
     $(name).html(html);  
@@ -337,13 +336,6 @@ function freewallize(name, size) {
 
     wall.fitWidth();
     $(window).trigger("resize");
-
-    /*$(".brick img").one("load", function () {
-        wall.fitWidth();
-    }).each(function () {
-        if (this.complete)
-            $(this).load();
-        });*/
 }
 
 
