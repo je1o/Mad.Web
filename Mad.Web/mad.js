@@ -300,13 +300,13 @@ function initWall(items, url, type, size, name) {
 }
 
 function initAwards(id, url, items) {
-    var temp = "<div class='{c}'><a rel='" + id + "' data-fancybox='images' href='{u}'><img src='{u}' /></a></div> ";
+    var temp = "<div class='{c}'><a rel='" + id + "' data-fancybox='images' href='{u}'><img src='{t}' /></a></div> ";
     var html = "";
     for (var i = 0; i <= items.length - 1; i++) {
         var cl = 'item';
         if (i === 0)
             cl += ' active';
-        html += temp.replace(/\{c\}/g, cl).replace(/\{u\}/g, url + items[i]);
+        html += temp.replace(/\{c\}/g, cl).replace(/\{u\}/g, url + items[i]).replace(/\{t\}/g, url + 't_' + item[0]);
     }
 
     $("#" + id).html(html);
