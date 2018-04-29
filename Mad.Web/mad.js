@@ -306,7 +306,8 @@ function initAwards(id, url, items) {
         var cl = 'item';
         if (i === 0)
             cl += ' active';
-        html += temp.replace(/\{c\}/g, cl).replace(/\{u\}/g, url + items[i]).replace(/\{t\}/g, url + 't_' + items[i]);
+        var thumb = 't_' + items[i].replace(/\.jpg/g, '.png');
+        html += temp.replace(/\{c\}/g, cl).replace(/\{u\}/g, url + items[i]).replace(/\{t\}/g, url + thumb);
     }
 
     $("#" + id).html(html);
