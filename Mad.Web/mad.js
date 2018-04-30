@@ -232,23 +232,9 @@ function initMad() {
         });
     }
 
-    var wall = new Freewall("#awardWall");
-    wall.reset({
-        selector: ".thumbnail",
-        animate: false,
-        cellW: 200,
-        cellH: 480,
-        onResize: function () {
-            wall.refresh();
-        }
-    });
-
     $("#awardWall").imagesLoaded().always(function (instance) {
         $("#awardWall").css("visibility", "visible");
     })
-
-    wall.fitWidth();
-    $(window).trigger("resize");
 
     emailjs.init("user_W4oMRathYxpVpn1vW2JQa");
     $('#cForm').submit(function () {

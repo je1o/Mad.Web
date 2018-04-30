@@ -110,13 +110,7 @@ h3, h4 {
     }
 
 .bg-3 {
-    padding: 80px 120px
-}
-
-@media (max-width: 600px) {
-    .bg-3 {
-        padding: 80px 30px 60px;
-    }    
+    padding: 80px 80px
 }
 
 .list-group-item:first-child {
@@ -133,8 +127,6 @@ h3, h4 {
     padding: 0 0 15px 0;
     border: none;
     border-radius: 0;
-    width: 200px;
-    height: 350px;
 }
 
     .thumbnail p {
@@ -272,4 +264,18 @@ textarea {
 
 .loader {
     visibility: hidden;
+}
+
+.spacer {
+    height: 68px;
+}
+
+@media (max-width: 420px) {
+    .bg-3 {
+        padding: 80px 50px 60px;
+    }
+
+    .spacer {
+        height: 0px;
+    }
 }
