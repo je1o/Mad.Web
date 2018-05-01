@@ -266,16 +266,23 @@ textarea {
     visibility: hidden;
 }
 
-.spacer {
-    height: 68px;
-}
-
 @media (max-width: 420px) {
     .bg-3 {
-        padding: 80px 50px 60px;
+        padding: 80px 20px 60px;
     }
+   
+        .thumbnail p {
+            margin-top: 15px;
+            color: #555;
+            font-size: 8px;
+        }
 
-    .spacer {
-        height: 0px;
-    }
+            .thumbnail p strong {
+                font-size: 10px;
+            }
+
+        .thumbnail .logo {
+            width: 60px;
+            height: 48px;
+        }
 }

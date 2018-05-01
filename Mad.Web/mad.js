@@ -136,7 +136,7 @@
             },
             {
                 "id": "aw3",
-                "url": "Images/Awards/Engro2013/",
+                "url": "Images/Awards/ENGRO2013/",
                 "images":
                     [
                         "ENGRO2013_Review Final_SGX-001.jpg",
@@ -234,7 +234,12 @@ function initMad() {
 
     $("#awardWall").imagesLoaded().always(function (instance) {
         $("#awardWall").css("visibility", "visible");
-    })
+        alignAwards();
+    });    
+
+    $(window).on('resize', function () {
+        alignAwards();
+    });
 
     emailjs.init("user_W4oMRathYxpVpn1vW2JQa");
     $('#cForm').submit(function () {
@@ -299,6 +304,14 @@ function initAwards(id, url, items) {
     $("#" + id).html(html);
 }
 
+function alignAwards() {
+    var heights = $(".awC :not(#awOut1)").map(function () {
+        return $(this).height();
+    }).get();
+    var maxHeight = Math.max.apply(null, heights);
+    $("#awOut1").height(maxHeight);
+}
+
 function freewallize(name, size) {
     $(".brick").each(function (index, item) {
         var h = parseInt($(item).children('a').attr("data-height"));
@@ -324,7 +337,6 @@ function freewallize(name, size) {
     wall.fitWidth();
     $(window).trigger("resize");
 }
-
 
 function submitContact(value) {
     if (value) {
