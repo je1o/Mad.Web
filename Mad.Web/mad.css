@@ -266,6 +266,12 @@ textarea {
     visibility: hidden;
 }
 
+.vcenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 @media (max-width: 420px) {
     .bg-3 {
         padding: 80px 20px 60px;
