@@ -64,7 +64,7 @@ h3, h4 {
     }
 
 .bg-3 {
-    padding: 60px 80px
+    padding: 60px 80px;
 }
 
 .list-group-item:first-child {
@@ -285,6 +285,11 @@ textarea {
     .bg-3 {
         padding: 60px 20px;
     }
+
+        .bg-3 div[class^="col"] {
+            padding-left:10px; 
+            padding-right:10px;
+        }
 
     .bg-4 {
         font-size: 12px;
