@@ -4,14 +4,14 @@
 }
 
 h3, h4 {
-    margin: 10px 0 30px 0;
+    margin: 0px 0 30px 0;
     letter-spacing: 10px;
     font-size: 20px;
     color: #111;
 }
 
 .container {
-    padding: 60px 30px;
+    padding: 80px 30px 60px;
 }
 
 .person {
@@ -64,7 +64,7 @@ h3, h4 {
     }
 
 .bg-3 {
-    padding: 60px 80px;
+    padding: 80px 80px 60px;
 }
 
 .list-group-item:first-child {
@@ -283,7 +283,7 @@ textarea {
 
 @media (max-width: 420px) {
     .bg-3 {
-        padding: 60px 20px;
+        padding: 80px 20px 60px;
     }
 
         .bg-3 div[class^="col"] {
