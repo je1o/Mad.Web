@@ -401,6 +401,9 @@
     <Content Include="Images\MAIN1.png" />
     <Content Include="Images\MAIN2.png" />
     <Content Include="Images\MAIN3.png" />
+    <Content Include="Images\MOBILE1.png" />
+    <Content Include="Images\MOBILE2.png" />
+    <Content Include="Images\MOBILE3.png" />
     <Content Include="Images\Prints\AD_adidas.png" />
     <Content Include="Images\Prints\AD_adidas2.png" />
     <Content Include="Images\Prints\AD_SGK_a4.png" />

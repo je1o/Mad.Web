@@ -5,6 +5,11 @@
             ["MAIN2.png", "1200", "700"],
             ["MAIN3.png", "1200", "700"],
         ],
+        "whirligig": [
+            ["MOBILE3.png", "400", "700"],
+            ["MOBILE2.png", "400", "700"],
+            ["MOBILE1.png", "400", "700"],
+        ],
         "photos": [
             ["MAD-01.png", "600", "900"],
             ["MAD-02.png", "1094", "900"],
@@ -239,6 +244,7 @@ function initMad() {
 
     $(window).on('resize', function () {
         alignAwards();
+        updateCarousel();
     });
 
     emailjs.init("user_W4oMRathYxpVpn1vW2JQa");
@@ -273,6 +279,24 @@ function initCarousel(items, url) {
     }
 
     $("#carInner").html(html);
+}
+
+function updateCarousel() {
+    var h = $(window).height();
+    var w = $(window).width();
+    var data = getData();
+
+    $("#carInner img").each(function (index, item) {
+        var d;
+        if (h > w)
+            d = data.whirligig[index];
+        else
+            d = data.carousel[index];
+
+        $(item).attr("src", "Images/" + d[0]);
+        $(item).attr("width", d[1]);
+        $(item).attr("height", d[2]);
+    });
 }
 
 function initWall(items, url, type, size, name) {
