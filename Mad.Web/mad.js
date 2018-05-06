@@ -213,7 +213,7 @@
 function initMad() {
     var data = getData();
 
-    initCarousel(data.carousel, "Images/");
+    initCarousel(data, "Images/");
     initWall(data.photos, "Images/", "photo", 250, "#photoWall");
     initWall(data.reports, "Images/Reports/", "report", 155, "#reportWall");
     initWall(data.prints, "Images/Prints/", "print", 165, "#printWall");
@@ -244,7 +244,7 @@ function initMad() {
 
     $(window).on('resize', function () {
         alignAwards();
-        updateCarousel();
+        updateCarousel(data, "Images/");
     });
 
     emailjs.init("user_W4oMRathYxpVpn1vW2JQa");
@@ -267,7 +267,13 @@ function initMad() {
     });
 }
 
-function initCarousel(items, url) {
+function initCarousel(data, url) {
+    var h = $(window).height();
+    var w = $(window).width();
+    var items = data.carousel;
+    if (h > w)
+        items = data.whirligig;
+
     var temp = "<div class='{c}'><img src='{u}' width='{w}' height='{h}'></div>";
     var html = "";
     for (var i = 0; i <= items.length - 1; i++) {
@@ -281,10 +287,9 @@ function initCarousel(items, url) {
     $("#carInner").html(html);
 }
 
-function updateCarousel() {
+function updateCarousel(data, url) {
     var h = $(window).height();
     var w = $(window).width();
-    var data = getData();
 
     $("#carInner img").each(function (index, item) {
         var d;
@@ -293,7 +298,7 @@ function updateCarousel() {
         else
             d = data.carousel[index];
 
-        $(item).attr("src", "Images/" + d[0]);
+        $(item).attr("src", url + d[0]);
         $(item).attr("width", d[1]);
         $(item).attr("height", d[2]);
     });
