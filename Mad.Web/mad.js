@@ -285,6 +285,10 @@ function initCarousel(data, url) {
     }
 
     $("#carInner").html(html);
+    $("#carInner").imagesLoaded().always(function (instance) {
+        $("#loadImg").css("display", "none");   
+        $(".loadOuter").css("display", "block");   
+    });
 }
 
 function updateCarousel(data, url) {

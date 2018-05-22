@@ -145,6 +145,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\ajax-loader.gif" />
     <Content Include="Images\Awards\ARCAwards.png" />
     <Content Include="Images\Awards\DMPL\DelMonte2013LS_17March-01.jpg" />
     <Content Include="Images\Awards\DMPL\DelMonte2013LS_17March-02.jpg" />

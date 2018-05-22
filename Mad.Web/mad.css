@@ -1,6 +1,11 @@
-﻿body {
+﻿html {
+    height: 100%;
+}
+
+body {
     font: 400 15px/1.8 Lato, sans-serif;
     color: #777;
+    height: 100%;
 }
 
 h3, h4 {
@@ -214,6 +219,10 @@ textarea {
     margin: 0;
     display: block;
     width: 100%;
+}
+
+.loadOuter {
+    display: none;
 }
 
 .loader {
